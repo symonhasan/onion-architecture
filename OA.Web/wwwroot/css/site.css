@@ -1,0 +1,144 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+thead {
+    background-color: #6C63FF;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#place-rating {
+    cursor: pointer;
+}
+
+.search-form {
+    display: flex;
+    justify-content: flex-end;
+}
+
+    .search-form input {
+        flex-grow: 1;
+    }
+
+.login {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    .login-left > h2 {
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+
+    .login-left > p {
+        letter-spacing: 1px;
+    }
+
+    .login-left img {
+        width: 80%;
+    }
+
+.login-form > .form-group {
+    position: relative;
+    margin-top: 25px;
+}
+
+.login-form label {
+    position: absolute;
+    background-color: white;
+    top: -15px;
+    left: 3px;
+    padding: 0 1px 0 1px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+}
+
+.td-title {
+    font-weight: 600;
+}
+
+form label {
+    font-weight: 500;
+    font-size: 0.85rem;
+}

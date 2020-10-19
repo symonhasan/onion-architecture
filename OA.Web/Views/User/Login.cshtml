@@ -1,0 +1,34 @@
+﻿@model OA.Web.Models.UserViewModel
+@{ 
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+<div class="container login-main">
+    <div class="row">
+        <div class="col-sm-6 login-left">
+            <img src="~/image/map.svg" />
+            <h4>Tourist Place</h4>
+            <p>Crud Application</p>
+        </div>
+        <div class="col-sm-4 offset-sm-2 login-right">
+            <h5>Welcome Back :)</h5>
+            <p>please login to continue....</p>
+            <span asp-for="ErrorMsg" class="text-danger">@Model.ErrorMsg</span>
+            <form asp-controller="User" asp-action="Login">
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" placeholder="example@mail.com" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password" class="control-label"></label>
+                    <input asp-for="Password" class="form-control" placeholder="Enter password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-info">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

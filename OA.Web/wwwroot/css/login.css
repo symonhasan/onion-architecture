@@ -1,0 +1,31 @@
+﻿.login-main{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #f7f7f7;
+}
+.login-left{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.login-left img{
+    width: 80%;
+}
+.login-left p{
+    font-style: italic;
+    letter-spacing: 1px;
+}
+.login-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.login-right p{
+    font-style: italic;
+    letter-spacing: 1px;
+}
+.login-right label{
+    font-weight: 500;
+    font-size: 0.9rem;
+}

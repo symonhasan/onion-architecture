@@ -1,0 +1,38 @@
+﻿@model OA.Web.Models.TouristPlaceViewModel
+@{
+    ViewData["Title"] = "Details";
+}
+<h1>Details</h1>
+<h4>Tourist Place</h4>
+<br />
+<div class="row">
+    <div class="col-sm-8">
+        <table class="table table-bordered  details-table">
+            <tbody>
+                <tr>
+                    <td rowspan="4" class="text-center">
+                        <img src="~/image/@Model.Image" height="240" />
+                    </td>
+                    <td class="td-title">Name</td>
+                    <td>@Model.Name</td>
+                </tr>
+                <tr>
+                    <td class="td-title">Address</td>
+                    <td>@Model.Address</td>
+                </tr>
+                <tr>
+                    <td class="td-title">Rating</td>
+                    <td>@Model.Rating</td>
+                </tr>
+                <tr>
+                    <td class="td-title">Type</td>
+                    <td>@Model.TypeName</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="CheckRedirection">Back to List</a>
+</div>

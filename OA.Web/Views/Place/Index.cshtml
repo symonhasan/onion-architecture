@@ -1,0 +1,50 @@
+﻿@model IEnumerable<dynamic>
+@{
+    ViewData["Title"] = "List";
+}
+<h1 class="mb-3">Tourist Places</h1>
+<div class="row">
+    <div class="col-sm-4 mb-3">
+        <a asp-controller="Place" asp-action="Create" class="btn btn-primary">Add Place</a>
+    </div>
+    <div class="col-sm-4 offset-sm-4 text-right">
+        <div class="search-form">
+            <input type="text" placeholder="Search.." id="search" />
+            <button class="btn-sm btn-primary" type="button" id="search-btn" value="Search">Search</button>
+        </div>
+    </div>
+</div>
+
+<table class="table table-bordered table-striped text-center">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Address</td>
+            <td id="place-rating">Rating</td>
+            <td>Type</td>
+            <td>Image</td>
+            <td>Actions</td>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (dynamic place in Model)
+            {
+                <tr>
+                    <td>@place.Name</td>
+                    <td>@place.Address</td>
+                    <td>@place.Rating</td>
+                    <td>@place.TypeName</td>
+                    <td>
+                        <img src="~/image/@place.Image" height="50" width="80" />
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@place.Id" class="btn-sm btn-primary">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@place.Id" class="btn-sm btn-info">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@place.Id" class="btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
